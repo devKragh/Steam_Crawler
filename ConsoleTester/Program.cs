@@ -42,13 +42,23 @@ namespace ConsoleTester
 				{
 					var retrivedOffers = retriver.StartCrawlerAsync(
 										"https://store.steampowered.com/search/?specials=1&page=2").Result;
+
 					foreach (GameOffer item in retrivedOffers)
 					{
-						Console.WriteLine(item.Title + "\n");
-						Console.WriteLine(item.Discount + "\n");
-						Console.WriteLine(item.Price + "\n");
-						Console.WriteLine(item.Link + "\n");
-						Console.WriteLine("\n");
+						Console.WriteLine(item.SteamAppId + "\n" +
+							item.Title + "\n" +
+							item.PriceBeforeDiscount + "\n" +
+							item.PriceAfterDiscount + "\n" +
+							item.DiscountPercentage + "\n" +
+							item.UserReviewScore + "\n" +
+							item.StoreLink);
+
+						foreach (var platform in item.Platforms)
+						{
+							Console.WriteLine(platform);
+						}
+
+						Console.WriteLine("\n\n");
 					}
 				}
 			}
