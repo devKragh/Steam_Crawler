@@ -45,20 +45,7 @@ namespace ConsoleTester
 
 					foreach (GameOffer item in retrivedOffers)
 					{
-						Console.WriteLine(item.SteamAppId + "\n" +
-							item.Title + "\n" +
-							item.PriceBeforeDiscount + "\n" +
-							item.PriceAfterDiscount + "\n" +
-							item.DiscountPercentage + "\n" +
-							item.UserReviewScore + "\n" +
-							item.StoreLink);
-
-						foreach (var platform in item.Platforms)
-						{
-							Console.WriteLine(platform);
-						}
-
-						Console.WriteLine("\n\n");
+						Console.WriteLine(item.ToString());
 					}
 				}
 			}

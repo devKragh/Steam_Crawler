@@ -3,26 +3,61 @@ using System.Collections.Generic;
 
 namespace SteamCrawler.Model
 {
+	public enum Platform
+	{
+		Win, Mac, Linux, None
+	}
 	public class GameOffer
 	{
-		public long SteamAppId { get; set; }
+		public int SteamAppId { get; set; }
 		public string Title { get; set; }
-		public string PriceBeforeDiscount { get; set; }
-		public string PriceAfterDiscount { get; set; }
-		public string DiscountPercentage { get; set; }
-		public string UserReviewScore { get; set; }
-		public List<string> Platforms { get; set; }
+		public decimal PriceBeforeDiscount { get; set; }
+		public decimal PriceAfterDiscount { get; set; }
+		public int DiscountPercentage { get; set; }
+		public int UserReviewScore { get; set; }
+		public HashSet<Platform> Platforms { get; set; }
 		public string StoreLink { get; set; }
 
 		public GameOffer()
 		{
-			Platforms = new List<string>();
+			Platforms = new HashSet<Platform>();
 		}
 
-		public void AddPlatform(string platform)
+		public void AddPlatform(Platform platform)
 		{
-			Platforms.Add(platform);
+			if (Platforms.Contains(platform))
+			{
+				throw new Exception("Gameoffer already has that platform");
+			}
+			else
+			{
+				if (platform != Platform.None)
+				{
+					Platforms.Add(platform);
+				}
+
+			}
 		}
 
+
+		public override string ToString()
+		{
+			string res = "Steam App Id: " + SteamAppId + "\n" +
+				"Title: " + Title + "\n" +
+				"Normal Price: " + PriceBeforeDiscount + "\n" +
+				"Discounted Price: " + PriceAfterDiscount + "\n" +
+				"Discound Percentage: " + DiscountPercentage + "\n" +
+				"Review score: " + UserReviewScore + "\n" +
+				"Store Link: " + StoreLink + "\n";
+
+			foreach (Platform platform in Platforms)
+			{
+				res += platform.ToString() + ", ";
+			}
+
+			res += "\n\n";
+
+			return res;
+		}
 	}
 }
