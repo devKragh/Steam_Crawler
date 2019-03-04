@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamCrawler.Model", "Steam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamCrawler.Logic.Tests", "SteamCrawler.Logic.Tests\SteamCrawler.Logic.Tests.csproj", "{49E3D8A7-034C-4D9F-9CF5-907675C90BF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamCrawler.DAL", "SteamCrawler.DAL\SteamCrawler.DAL.csproj", "{D12AB7A8-6BEB-49D0-8683-E83F32D788D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{49E3D8A7-034C-4D9F-9CF5-907675C90BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E3D8A7-034C-4D9F-9CF5-907675C90BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E3D8A7-034C-4D9F-9CF5-907675C90BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12AB7A8-6BEB-49D0-8683-E83F32D788D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12AB7A8-6BEB-49D0-8683-E83F32D788D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12AB7A8-6BEB-49D0-8683-E83F32D788D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12AB7A8-6BEB-49D0-8683-E83F32D788D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

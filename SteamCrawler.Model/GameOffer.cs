@@ -47,7 +47,7 @@ namespace SteamCrawler.Model
 				"Normal Price: " + PriceBeforeDiscount + "\n" +
 				"Discounted Price: " + PriceAfterDiscount + "\n" +
 				"Discound Percentage: " + DiscountPercentage + "\n" +
-				"Review score: " + UserReviewScore + "\n" +
+				"Review score: " + UserReviewScore + "/100\n" +
 				"Store Link: " + StoreLink + "\n";
 
 			foreach (Platform platform in Platforms)

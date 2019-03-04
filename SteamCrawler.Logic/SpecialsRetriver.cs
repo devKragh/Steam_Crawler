@@ -150,15 +150,15 @@ namespace SteamCrawler.Logic
 			Console.WriteLine(stringToConvert);
 
 			Platform res;
-			if (stringToConvert.Contains("win"))
+			if (stringToConvert.Equals("platform_img win"))
 			{
 				res = Platform.Win;
 			}
-			else if(stringToConvert.Contains("mac"))
+			else if(stringToConvert.Equals("platform_img mac"))
 			{
 				res = Platform.Mac;
 			}
-			else if(stringToConvert.Contains("linux"))
+			else if(stringToConvert.Equals("platform_img linux"))
 			{
 				res = Platform.Linux;
 			}
